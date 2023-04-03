@@ -1,0 +1,16 @@
+.includeBre{
+   
+}
+.Bre{
+    float: left;
+    margin:  0 16px 0px ;
+}
+.buttonall{
+    float: right;
+    width: 50px;
+    height: 24px;
+    background: (245,245,245);
+    color: gray;
+    line-height: 24px;
+    margin-right: 16px;
+}
