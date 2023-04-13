@@ -19,7 +19,6 @@ export default function GoodList(props) {
     <div>
       <h2>商品列表</h2>
       <h2>{size}</h2>
-
       <button onClick={addSize}>size+1</button>
       <button onClick={subSize}>size-4</button>
     </div>
