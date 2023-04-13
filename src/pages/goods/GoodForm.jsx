@@ -3,7 +3,7 @@ import React from 'react'
 export default function GoodForm() {
   return (
     <div>
-      goodsform
+      商品新增
     </div>
   )
 }

@@ -5,6 +5,7 @@ function useBreadcrumb() {
   let routes = [...asyncRoutes];
   let { pathname } = useLocation();
   let result = [routes[0]];
+  
   for (let i = 1; i < routes.length; i++) {
     if (routes[i].children) {
       for (let j = 0; j < routes[i].children.length; j++) {
