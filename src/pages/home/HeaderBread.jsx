@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Space, Dropdown, Menu } from "antd";
 import screenfull from "screenfull";
 import "../home/css/includeBre.css";
 import useBreadcrumb from "./useBreadcrumb";
@@ -9,6 +9,16 @@ import {
   FullscreenOutlined,
   FullscreenExitOutlined,
 } from "@ant-design/icons";
+
+// 下拉组件的数据源
+const size = ["large", "middle", "small"];
+const sizeMenu = (
+  <Menu
+    items={size.map((item) => {
+      return { key: "item", label: <div>{item}</div> };
+    })}
+  />
+);
 
 export default function HeaderBread() {
   const [full, setFull] = useState(false);
@@ -40,6 +50,7 @@ export default function HeaderBread() {
       screenfull.toggle();
     }
   };
+
   return (
     <div className="includeBre">
       <div className="Bre">
@@ -50,10 +61,17 @@ export default function HeaderBread() {
           <FullscreenOutlined onClick={toggleFull} />
         ) : (
           <FullscreenExitOutlined onClick={toggleFull} />
-        )}{" "}
+        )}
       </div>
       <div className="buttonall">
-        <FontSizeOutlined />
+        <Dropdown
+          menu={
+            sizeMenu
+          }
+          placement="bottom" trigger={['click']}
+        >
+          <FontSizeOutlined/>
+        </Dropdown>
       </div>
       <div className="buttonall">
         <FontColorsOutlined />
