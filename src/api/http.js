@@ -14,7 +14,7 @@ const http = axios.create({
 http.interceptors.request.use(
   function (config) {
     //登录时存储的token取出来
-    config.headers.Authorization = localStorage.getItem("token-name");
+    config.headers.Authorization = localStorage.getItem("token");
     return config;
   },
   //请求出错时的代码

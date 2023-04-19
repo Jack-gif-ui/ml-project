@@ -1,9 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import accessRoutes from "./pages/MenConfig.jsx";
+import Permission from "./Permission";
 
 //动态创建路由器,可访问路由
 function createRoutes(accessRoutes) {
@@ -36,22 +34,19 @@ function createRoutes(accessRoutes) {
   return res;
 }
 
+
+
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
         {/* <Link to="/">首页</Link>
       <Link to="/login">登陆</Link> */}
-        <Routes>
-          <Route path="/" element={<Home />}>
-            {/* <Route path="/dashboard" element={<Dashboard />}></Route>
-          <Route path="/goodform" element={<GoodForm />}></Route>
-          <Route path="/good/list" element={<GoodList />}></Route>
-          <Route path="/user" element={<User />}></Route> */}
-            {createRoutes(accessRoutes)}
-          </Route>
+        {/* <Routes>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
-        </Routes>
+        </Routes> */}
+        <Permission />
       </BrowserRouter>
     </Provider>
   );

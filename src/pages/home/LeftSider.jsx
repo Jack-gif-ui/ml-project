@@ -4,9 +4,10 @@ import { Menu } from "antd";
 import logo1 from "../../assets/logo1.png";
 import logo2 from "../../assets/logo2.png";
 import "./css/logo.css";
-import asyncRoutes from "../MenConfig";
+
 import { Link } from "react-router-dom";
 import useMenu from "./userMenu";
+import { useSelector } from "react-redux";
 
 const Logo = ({ value }) => {
   return (
@@ -59,6 +60,9 @@ function createItems(asyncRoutes) {
 export default function LeftSider(props) {
   //使用自定义hook
   const [openKeys,selectedKeys] = useMenu()
+
+
+  const {accessRoutes} = useSelector((state)=>state.user_reducer)
   return (
     <div>
       <Logo {...props} />
@@ -67,7 +71,7 @@ export default function LeftSider(props) {
         mode="inline"
         defaultSelectedKeys={selectedKeys}
         defaultOpenKeys={openKeys}
-        items={createItems(asyncRoutes)}
+        items={createItems(accessRoutes)}
       />
     </div>
   );
