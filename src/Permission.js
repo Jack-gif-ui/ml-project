@@ -1,8 +1,10 @@
 import { useRoutes } from "react-router-dom";
-import constantRoutes from "./pages/MenConfig";
+import {constantRoutes} from "./pages/MenConfig";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useMemo } from "react";
-import getInfo from "./store/actionsCreator";
+
+import {getInfo} from "./store/actionsCreator";
+
 import { generateRoutes } from "./store/permission";
 import { asyncRoutes } from "./pages/MenConfig";
 

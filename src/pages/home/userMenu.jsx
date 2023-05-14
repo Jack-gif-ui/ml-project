@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import asyncRoutes from "../MenConfig";
+import {asyncRoutes} from "../MenConfig";
 
 function useMenu() {
   let { pathname } = useLocation();

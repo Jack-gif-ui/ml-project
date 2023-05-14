@@ -16,7 +16,9 @@ export default function Home() {
   return (
     <div className="ml-layout">
       <Layout>
+      
         <Sider trigger={null} collapsible collapsed={collapsed}>
+        {/* 侧边栏 */}
           <LeftSider value={collapsed}/>
         </Sider>
 
@@ -27,6 +29,7 @@ export default function Home() {
               background: colorBgContainer,
             }}
           >
+          {/* 折叠按钮 */}
              {React.createElement(
               collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
               {
@@ -37,6 +40,7 @@ export default function Home() {
             {/* <div onClick={() => setCollapsed(!collapsed)} className="trigger">
               {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
             </div> */}
+            {/* 面包屑 */}
             <HeaderBread/>
             
           </Header>

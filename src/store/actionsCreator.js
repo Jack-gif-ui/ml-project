@@ -29,8 +29,6 @@ export function switchColor(color) {
 //     fetchUserInfo().then(res=>{
 //       //获取用户信息并存储
 //       dispatch({type:'USER_INFO',payload:res})
-
-
 //     })
 //   }
 // }

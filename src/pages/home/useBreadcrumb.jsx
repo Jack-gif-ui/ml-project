@@ -1,4 +1,4 @@
-import asyncRoutes from "../MenConfig";
+import {asyncRoutes} from "../MenConfig";
 import { useLocation } from "react-router-dom";
 
 function useBreadcrumb() {
